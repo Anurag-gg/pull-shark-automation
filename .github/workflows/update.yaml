@@ -1,0 +1,31 @@
+name: achievement-collector
+
+on:
+  schedule:
+    - cron: '*/6 * * * *'
+
+jobs:
+  block_update:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout repo content
+        uses: actions/checkout@v2
+        with: 
+          persist-credentials : false
+          fetch-depth: 0
+
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7.7'
+        
+      - name: execute py script 
+        run: python main.py
+          
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+            commit-message: Update progress
+            title: Update progress
+            branch: update-progress
