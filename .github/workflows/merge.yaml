@@ -16,7 +16,7 @@ jobs:
           github-token: "${{ secrets.PAT }}"
           script: |
             const creator = context.payload.sender.login
-            if(creator != "Kubika-gg")
+            if(creator != "Anurag-gg")
               return
             
             const pull_number = ${{github.event.pull_request.number}}
