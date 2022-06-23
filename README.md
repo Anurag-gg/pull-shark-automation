@@ -2,7 +2,7 @@
 ## How to use
 
 1. Fork this repo.
-2. Open status.md and clear the entire file OR put the number of pull requests that you have to start from.
+2. Open status.md and  put the number of pull requests that you have to start from.
 3. For this action to work you must explicitly allow GitHub Actions to create pull requests. This setting can be found in a repository's settings under Actions > General > Workflow permissions.
 Create a [Personal Access Token](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) and name it as PAT [in Github secrets](https://github.com/Azure/actions-workflow-samples/blob/master/assets/create-secrets-for-GitHub-workflows.md)
 4. Go to .github/workflows > merge.yaml and change the creator from Anurag-gg to your username
