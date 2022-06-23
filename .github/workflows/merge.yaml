@@ -1,0 +1,29 @@
+
+name: merge PR
+
+on:
+  pull_request:
+
+jobs:
+  merge:
+    name: "Merge"
+    runs-on: "ubuntu-latest"
+    steps:
+
+      - name: "Merge PR"
+        uses: "actions/github-script@v5"
+        with:
+          github-token: "${{ secrets.PAT }}"
+          script: |
+            const creator = context.payload.sender.login
+            if(creator != "Kubika-gg")
+              return
+            
+            const pull_number = ${{github.event.pull_request.number}}
+            const repository = context.repo
+            await github.rest.pulls.merge({
+              merge_method: "merge",
+              owner: repository.owner,
+              pull_number: pull_number,
+              repo: repository.repo,
+            })
