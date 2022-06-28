@@ -1,4 +1,4 @@
-name: achievement-collector
+name: Achievement-collector
 
 on:
   schedule:
