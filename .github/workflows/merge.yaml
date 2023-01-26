@@ -1,5 +1,5 @@
 
-name: merge PR
+name: mica
 
 on:
   pull_request:
