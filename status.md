@@ -1,1 +1,1 @@
-1 pull requests merged<br>Currently:<br>![pull-shark](images/pull-shark-default.png)
+7 pull requests merged<br>Currently:<br>![pull-shark](images/pull-shark-default.png)
