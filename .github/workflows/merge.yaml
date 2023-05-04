@@ -10,7 +10,7 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
 
-      - name: "Merge PR"
+      - name: "luckyguy1000"
         uses: "actions/github-script@v5"
         with:
           github-token: "${{ secrets.PAT }}"
