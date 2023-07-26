@@ -4,6 +4,7 @@ name: merge PR
 on:
   pull_request:
 
+
 jobs:
   merge:
     name: "Merge"
