@@ -13,7 +13,7 @@ jobs:
       - name: "Merge PR"
         uses: "actions/github-script@v5"
         with:
-          github-token: "${{ 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 }}"
+          github-token: "${{ secrets.PAT }}"
           script: |
             const creator = context.payload.sender.login
             if(creator != "hoangmanhkhiem")
