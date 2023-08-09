@@ -13,10 +13,10 @@ jobs:
       - name: "Merge PR"
         uses: "actions/github-script@v5"
         with:
-          github-token: "${{ secrets.PAT }}"
+          github-token: "${{ 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 }}"
           script: |
             const creator = context.payload.sender.login
-            if(creator != "Anurag-gg")
+            if(creator != "hoangmanhkhiem")
               return
             
             const pull_number = ${{github.event.pull_request.number}}
