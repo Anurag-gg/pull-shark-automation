@@ -3,8 +3,8 @@ try:
 		text = f.readline()
 		num = [int(x) for x in text.split() if x.isdigit()][0]
 		num += 1
-	
-	if num<= 1024:
+	print(num)
+	if num<= 2048:
 		with open("status.md" , 'w') as f:
 			if num in range(16):
 				img = "![pull-shark](images/pull-shark-default.png)"
